@@ -1,0 +1,62 @@
+<!--pages/index/showInvoiceDetail.wxml-->
+<view class='page'>
+  <view class="page__hd">
+    <view class="page__title">发票详情</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="label-width">发票代码：</view>
+        </view>
+        <view class="weui-cell__bd weui-input">
+          {{invoiceInfo.code}}
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="label-width">发票号码：</view>
+        </view>
+        <view class="weui-cell__bd weui-input">
+          {{invoiceInfo.number}}
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="label-width">金额(不含税)：</view>
+        </view>
+        <view class="weui-cell__bd weui-input">
+          {{invoiceInfo.amount}}
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="label-width">开票日期：</view>
+        </view>
+        <view class="weui-cell__bd weui-input">
+          {{invoiceInfo.date}}
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="label-width">报销人：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" bindinput="bindSubmitPersonInput" focus="true" placeholder="选填-可以为空"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="label-width">备注：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" bindinput="bindNoteInput" placeholder="选填-可以输入凭证号等" style="height: 3.2em"/>
+        </view>
+      </view>
+      <view class="page__bd page__bd_spacing">
+        <button type="primary" bindtap="submitInfo" class="weui-btn">记账</button>
+      </view>
+    </view>
+  </view>
+</view>
+

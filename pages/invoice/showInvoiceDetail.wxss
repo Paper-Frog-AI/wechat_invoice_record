@@ -1,0 +1,6 @@
+/* pages/index/showInvoiceDetail.wxss */
+.label-width {
+width:150px;
+word-wrap:break-word;
+word-break:break-all;
+}

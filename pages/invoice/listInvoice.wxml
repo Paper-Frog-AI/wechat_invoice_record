@@ -1,0 +1,36 @@
+<view class='page'>
+  <view class="table">
+    <view class="tr">
+        <view class="th-n">号码</view>
+        <view class="th-n">金额</view>
+        <view class="th-w">开票时间</view>
+        <view class="th-w">记账时间</view>
+    </view>
+    <block wx:for="{{invoiceList}}" wx:key="number" wx:for-index="idx">
+      <view class="tr {{userCellId==idx?'userCellActive':'userCell'}}" catchtap="modelpop" data-code="{{item.code}}" data-number="{{item.number}}" data-amount="{{item.amount}}" data-date="{{item.date}}" data-submit_person="{{item.submit_person ==  undefined ? '' : item.submit_person}}" data-note="{{item.note ==  undefined ? '' : item.note}}" data-createdate="{{item.createDate}}" data-idx="{{idx}}">
+          <view class="td-n">{{item.number}}</view>
+          <view class="td-n">{{item.amount}}</view>
+          <view class="td-w">{{item.date}}</view>
+          <view class="td-w">{{item.createDate}}</view>
+        </view>
+      </block>
+  </view>
+
+  <modal bindtap="cancel" class="popup" hidden="{{modelhidden}}" no-cancel="true" title="发票详情">
+    <view>发票代码：{{modelCode}}</view>
+    <view>发票号码：{{modelNumber}}</view>
+    <view>合计金额(不含税)：<text>{{modelAmount}}</text></view>
+    <view>
+      开票日期：<text>{{modelDate}}</text>
+    </view>
+    <view>
+      报销人：<text>{{modelSubmit_person}}</text>
+    </view>
+    <view>
+      备注：<text>{{modelNote}}</text>
+    </view>
+    <view>
+      记账日期：<text>{{modelCreateDate}}</text>
+    </view>
+  </modal>
+</view>

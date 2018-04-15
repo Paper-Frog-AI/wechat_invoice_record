@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/invoice/listInvoice",
+    "pages/invoice/showInvoiceDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "发票管家",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "position":"top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "扫码"
+      },
+      {
+        "pagePath": "pages/invoice/listInvoice",
+        "text": "发票列表"
+      }
+    ]
+  },
+  "debug": true
+}

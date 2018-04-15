@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="page">
+  <include src="scanQR.wxml"/>
+  <include src="footer.wxml"/>
+</view>

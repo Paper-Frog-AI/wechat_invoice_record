@@ -1,0 +1,20 @@
+<!--
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+-->
+<view class="container">
+  <image style="width: 100px; height: 100px; background-color: #eeeeee;" mode="scaleToFill" src="/images/scanqr.png" bindtap="scanCode"></image>
+  <view class="weui-cells__tips">点击扫描发票二维码</view>
+
+  <view class='contact-btn'>
+    <view class="weui-cells__tips">有意见或者建议？请点击下面的按钮给我们留言。</view>
+    <view>
+    <button class="weui-btn" open-type="contact" session-from="weapp">给我留言</button>
+    </view>
+  </view>
+</view>
